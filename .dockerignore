@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+
+# Git
+.git
+.gitignore
+
+# Env files (로컬 환경 변수는 Docker build에 포함될 필요 없음)
+.env
+.env.*
+
+# terraform
+infra/
