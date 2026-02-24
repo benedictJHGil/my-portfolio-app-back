@@ -65,9 +65,10 @@ public class MainService {
                         ))
                     .toList(),
             p.getImage_url(),
+            p.getOutline(),
             p.getRole(),
-            p.getResult(),
-            p.getContent()
+            p.getContent(),
+            p.getResult()
         );
 
         List<ProjectDto> portfolioDto =

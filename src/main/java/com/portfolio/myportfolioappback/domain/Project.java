@@ -22,15 +22,16 @@ public class Project {
     private String page_url;
     @Column(nullable = false, length = 50) private String dev_env;
     private String image_url;
-    @Column(nullable = false, length = 200) private String role;
-    @Column(nullable = false, length = 200) private String result;
-    @Column(length = 1000) private String content;
+    @Column(length = 200) private String outline;
+    @Column(length = 200) private String role;
+    @Column(nullable = false, length = 2000) private String content;
+    @Column(length = 200) private String result;
     @Column(nullable = false) private LocalDateTime create_at;
     @Column(nullable = false) private LocalDateTime modified_at;
 
     protected Project() {}
 
-    public Project(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String role, String result, String content, LocalDateTime create_at, LocalDateTime modified_at) {
+    public Project(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String outline, String role, String content, String result, LocalDateTime create_at, LocalDateTime modified_at) {
         this.title = title;
         this.type = type;
         this.startdate = startdate;
@@ -39,14 +40,15 @@ public class Project {
         this.page_url = page_url;
         this.dev_env = dev_env;
         this.image_url = image_url;
+        this.outline = outline;
         this.role = role;
-        this.result = result;
         this.content = content;
+        this.result = result;
         this.create_at = create_at;
         this.modified_at = modified_at;
     }
 
-    public static Project of(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String role, String result, String content, LocalDateTime create_at, LocalDateTime modified_at) {
-        return new Project(title, type, startdate, enddate, git_rep_url, page_url, dev_env, image_url, role, result, content, create_at, modified_at);
+    public static Project of(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String outline, String role, String content, String result, LocalDateTime create_at, LocalDateTime modified_at) {
+        return new Project(title, type, startdate, enddate, git_rep_url, page_url, dev_env, image_url, outline, role, content, result, create_at, modified_at);
     }
 }
