@@ -16,7 +16,7 @@ public class Career {
     @Column(nullable = false, length = 20) private String name;
     @Column(nullable = false) private LocalDate startdate;
     private LocalDate enddate;
-    @Column(length = 20) private String reason;
+    @Column(length = 100) private String reason;
     @Column(nullable = false, length = 10) private String department;
     @Column(name = "`rank`", nullable = false, length = 10) private String rank;
     @Column(nullable = false, length = 10) private String work;

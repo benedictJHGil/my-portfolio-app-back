@@ -12,7 +12,8 @@ public record ProjectDto(
     String page_url,
     List<SkillDto> dev_env,
     String image_url,
+    String outline,
     String role,
-    String result,
-    String content
+    String content,
+    String result
  ) {}

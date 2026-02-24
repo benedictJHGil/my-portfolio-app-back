@@ -43,6 +43,9 @@ out/
 .env
 .env.*
 
+### Data ###
+data.sql
+
 ### terraform ###
 infra/.terraform/
 infra/*.tfstate
