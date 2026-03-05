@@ -6,9 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.portfolio.myportfolioappback.domain.DevEnv;
 import com.portfolio.myportfolioappback.domain.Project;
-import com.portfolio.myportfolioappback.dto.about.MainPageResponse;
-import com.portfolio.myportfolioappback.dto.about.ProjectDto;
-import com.portfolio.myportfolioappback.dto.about.SkillDto;
+import com.portfolio.myportfolioappback.dto.MainPageResponse;
+import com.portfolio.myportfolioappback.dto.ProjectDto;
+import com.portfolio.myportfolioappback.dto.SkillDto;
 import com.portfolio.myportfolioappback.repository.DevEnvRepository;
 import com.portfolio.myportfolioappback.repository.ProjectRepository;
 

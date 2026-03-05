@@ -1,4 +1,4 @@
-package com.portfolio.myportfolioappback.dto.about;
+package com.portfolio.myportfolioappback.dto;
 
 public record AboutDto(
     Long id,
