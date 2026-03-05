@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.portfolio.myportfolioappback.domain.About;
-import com.portfolio.myportfolioappback.dto.about.AboutPageResponse;
+import com.portfolio.myportfolioappback.dto.AboutPageResponse;
 import com.portfolio.myportfolioappback.repository.AboutRepository;
 import com.portfolio.myportfolioappback.service.AboutService;
 
