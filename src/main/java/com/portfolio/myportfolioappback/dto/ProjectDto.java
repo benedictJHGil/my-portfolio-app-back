@@ -15,5 +15,7 @@ public record ProjectDto(
     String outline,
     String role,
     String content,
-    String result
+    String result,
+    String slug,
+    boolean hasDetail
  ) {}

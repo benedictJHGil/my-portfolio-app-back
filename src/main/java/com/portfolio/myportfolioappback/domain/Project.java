@@ -26,12 +26,16 @@ public class Project {
     @Column(length = 200) private String role;
     @Column(nullable = false, length = 2000) private String content;
     @Column(length = 200) private String result;
+    @Column(nullable = false, unique = true)
+    private String slug;
+    @Column(name = "has_detail")
+    private boolean hasDetail;
     @Column(nullable = false) private LocalDateTime create_at;
     @Column(nullable = false) private LocalDateTime modified_at;
 
     protected Project() {}
 
-    public Project(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String outline, String role, String content, String result, LocalDateTime create_at, LocalDateTime modified_at) {
+    public Project(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String outline, String role, String content, String result, String slug, boolean hasDetail, LocalDateTime create_at, LocalDateTime modified_at) {
         this.title = title;
         this.type = type;
         this.startdate = startdate;
@@ -44,11 +48,13 @@ public class Project {
         this.role = role;
         this.content = content;
         this.result = result;
+        this.slug = slug;
+        this.hasDetail = hasDetail;
         this.create_at = create_at;
         this.modified_at = modified_at;
     }
 
-    public static Project of(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String outline, String role, String content, String result, LocalDateTime create_at, LocalDateTime modified_at) {
-        return new Project(title, type, startdate, enddate, git_rep_url, page_url, dev_env, image_url, outline, role, content, result, create_at, modified_at);
+    public static Project of(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String outline, String role, String content, String result, String slug, boolean hasDetail, LocalDateTime create_at, LocalDateTime modified_at) {
+        return new Project(title, type, startdate, enddate, git_rep_url, page_url, dev_env, image_url, outline, role, content, result, slug, hasDetail, create_at, modified_at);
     }
 }
