@@ -68,7 +68,9 @@ public class MainService {
             p.getOutline(),
             p.getRole(),
             p.getContent(),
-            p.getResult()
+            p.getResult(),
+            p.getSlug(),
+            p.isHasDetail()
         );
 
         List<ProjectDto> portfolioDto =
