@@ -22,39 +22,20 @@ public class Project {
     private String page_url;
     @Column(nullable = false, length = 50) private String dev_env;
     private String image_url;
+    @Column(length = 50) private String company;
     @Column(length = 200) private String outline;
     @Column(length = 200) private String role;
     @Column(nullable = false, length = 2000) private String content;
     @Column(length = 200) private String result;
+    @Column(length = 200) private String summary;
     @Column(nullable = false, unique = true)
     private String slug;
     @Column(name = "has_detail")
     private boolean hasDetail;
+    @Column(name = "is_experience")
+    private boolean isExperience;
     @Column(nullable = false) private LocalDateTime create_at;
     @Column(nullable = false) private LocalDateTime modified_at;
 
     protected Project() {}
-
-    public Project(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String outline, String role, String content, String result, String slug, boolean hasDetail, LocalDateTime create_at, LocalDateTime modified_at) {
-        this.title = title;
-        this.type = type;
-        this.startdate = startdate;
-        this.enddate = enddate;
-        this.git_rep_url = git_rep_url;
-        this.page_url = page_url;
-        this.dev_env = dev_env;
-        this.image_url = image_url;
-        this.outline = outline;
-        this.role = role;
-        this.content = content;
-        this.result = result;
-        this.slug = slug;
-        this.hasDetail = hasDetail;
-        this.create_at = create_at;
-        this.modified_at = modified_at;
-    }
-
-    public static Project of(String title, String type, LocalDate startdate, LocalDate enddate, String git_rep_url, String page_url, String dev_env, String image_url, String outline, String role, String content, String result, String slug, boolean hasDetail, LocalDateTime create_at, LocalDateTime modified_at) {
-        return new Project(title, type, startdate, enddate, git_rep_url, page_url, dev_env, image_url, outline, role, content, result, slug, hasDetail, create_at, modified_at);
-    }
 }

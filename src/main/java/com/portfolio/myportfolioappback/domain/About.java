@@ -5,6 +5,11 @@ import lombok.Getter;
 
 import java.time.LocalDate;
 
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
+
+import com.portfolio.myportfolioappback.domain.json.Introduction;
+
 @Getter
 @Entity
 public class About {
@@ -19,6 +24,13 @@ public class About {
     @Column(nullable = false) private LocalDate birthdate;
     @Column(nullable = false, length = 13) private String phoneNumber;
     @Column(nullable = false, length = 30) private String email;
+    @Column(nullable = false, length = 30) private String job;
+
+    @JdbcTypeCode(SqlTypes.JSON)
+    @Column(columnDefinition = "json", nullable = false, length = 30) 
+    private Introduction introduction;
+
+    private String resume;
     private String github;
     private String blog;
     private String youtube;
@@ -29,25 +41,4 @@ public class About {
     @Column(length = 100) private String certificate;
 
     protected About() {}
-
-    public About(String name_kr, String name_en, String nickname, LocalDate birthdate, String phoneNumber, String email, String github, String blog, String youtube, String skill, String academic, String career, String awards, String certificate) {
-        this.name_kr = name_kr;
-        this.name_en = name_en;
-        this.nickname = nickname;
-        this.birthdate = birthdate;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.github = github;
-        this.blog = blog;
-        this.youtube = youtube;
-        this.skill = skill;
-        this.academic = academic;
-        this.career = career;
-        this.awards = awards;
-        this.certificate = certificate;
-    }
-
-    public static About of(String name_kr, String name_en, String nickname, LocalDate birthdate, String phoneNumber, String email, String github, String blog, String youtube, String skill, String academic, String career, String awards, String certificate) {
-        return new About(name_kr, name_en, nickname, birthdate, phoneNumber, email, github, blog, youtube, skill, academic, career, awards, certificate);
-    }
 }

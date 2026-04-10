@@ -18,18 +18,8 @@ public class Academic {
     private LocalDate enddate;
     @Column(nullable = false, length = 100) private String major;
     @Column(length = 5) private String grade;
+    @Column(name = "is_final", nullable = false, length = 5) 
+    private boolean isFinal;
 
     protected Academic() {}
-
-    public Academic(String name, LocalDate startdate, LocalDate enddate, String major, String grade) {
-        this.name = name;
-        this.startdate = startdate;
-        this.enddate = enddate;
-        this.major = major;
-        this.grade = grade;
-    }
-
-    public static Academic of(String name, LocalDate startdate, LocalDate enddate, String major, String grade) {
-        return new Academic(name, startdate, enddate, major, grade);
-    }
 }

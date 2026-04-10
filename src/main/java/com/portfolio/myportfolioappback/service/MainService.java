@@ -61,10 +61,12 @@ public class MainService {
                             e.getName(),
                             e.getType(),
                             e.getLevel(),
+                            e.getCategory(),
                             e.getLogo_url()
                         ))
                     .toList(),
             p.getImage_url(),
+            p.getCompany(),
             p.getOutline(),
             p.getRole(),
             p.getContent(),

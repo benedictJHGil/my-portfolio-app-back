@@ -6,5 +6,6 @@ public record AcademicDto(
     String startdate,
     String enddate,
     String major,
-    String grade
+    String grade,
+    boolean isFinal
 ) {}

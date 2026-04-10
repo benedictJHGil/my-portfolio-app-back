@@ -5,5 +5,6 @@ public record SkillDto(
     String name,
     String type,
     String level,
+    String category,
     String logo_url
 ) {}
