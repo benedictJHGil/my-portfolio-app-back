@@ -9,5 +9,6 @@ import java.util.Optional;
 
 public interface ProjectRepository extends JpaRepository<Project, Long> {
     List<Project> findAllByIdNotAndTypeIn(Long id, List<String> types);
+    List<Project> findByIsExperienceTrue();
     Optional<Project> findBySlug(String slug);
 }

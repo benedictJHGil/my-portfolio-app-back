@@ -14,6 +14,8 @@ public class Career {
     private Long id;
 
     @Column(nullable = false, length = 20) private String name;
+    @Column(name = "name_en", length = 20) 
+    private String nameEn;
     @Column(nullable = false) private LocalDate startdate;
     private LocalDate enddate;
     @Column(length = 100) private String reason;

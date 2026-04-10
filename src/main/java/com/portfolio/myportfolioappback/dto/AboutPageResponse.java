@@ -5,6 +5,7 @@ import java.util.List;
 public record AboutPageResponse(
     AboutDto profile,
     List<SkillDto> skills,
+    List<ExperienceDto> experiences,
     String totalDate,
     List<CareerDto> careers,
     List<AcademicDto> academics,

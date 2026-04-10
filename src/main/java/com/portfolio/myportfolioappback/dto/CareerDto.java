@@ -5,6 +5,7 @@ import java.util.List;
 public record CareerDto(
     Long id,
     String name,
+    String nameEn,
     String startdate,
     String enddate,
     String duration,
